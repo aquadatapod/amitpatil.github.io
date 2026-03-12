@@ -5,49 +5,98 @@
 
 <title>Publications | Amit Patil</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 body{
 font-family: Arial, sans-serif;
-background:#f5f5f5;
 margin:0;
+background:#f4f6f7;
 }
 
-.header{
-background:#2c3e50;
-color:white;
-padding:20px;
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:260px;
+height:100%;
+background:white;
+padding:30px 20px;
+box-shadow:2px 0 8px rgba(0,0,0,0.08);
 text-align:center;
 }
 
+.sidebar img{
+width:180px;
+height:auto;
+border-radius:6px;
+margin-bottom:15px;
+}
+
+.sidebar h2{
+margin:10px 0 5px 0;
+}
+
+.sidebar p{
+font-size:14px;
+color:#555;
+}
+
+.links{
+margin-top:20px;
+text-align:left;
+}
+
+.links a{
+display:block;
+text-decoration:none;
+color:#2c3e50;
+padding:8px 0;
+}
+
+.links a i{
+margin-right:10px;
+}
+
+.links a:hover{
+color:#1abc9c;
+}
+
+/* MAIN CONTENT */
+
+.main{
+margin-left:280px;
+padding:40px;
+}
+
+/* NAVBAR */
+
 .navbar{
-background:#34495e;
-overflow:hidden;
+background:#2c3e50;
+padding:15px;
+margin-bottom:30px;
 }
 
 .navbar a{
-float:left;
-display:block;
 color:white;
-padding:14px 20px;
 text-decoration:none;
+margin-right:25px;
+font-weight:bold;
 }
 
 .navbar a:hover{
-background:#1abc9c;
+color:#1abc9c;
 }
 
-.container{
-max-width:1000px;
-margin:auto;
-background:white;
-padding:40px;
-margin-top:20px;
-box-shadow:0 0 8px rgba(0,0,0,0.1);
-}
+/* PUBLICATION STYLE */
 
 .paper{
 margin-bottom:30px;
+padding-bottom:15px;
+border-bottom:1px solid #ddd;
 line-height:1.6;
 }
 
@@ -68,16 +117,19 @@ font-style:italic;
 color:#555;
 }
 
-.link{
-margin-top:5px;
+.link a{
+color:#1abc9c;
+text-decoration:none;
+}
+
+.link a:hover{
+text-decoration:underline;
 }
 
 .footer{
-text-align:center;
-padding:15px;
-margin-top:30px;
-background:#2c3e50;
-color:white;
+margin-top:50px;
+color:#777;
+font-size:14px;
 }
 
 </style>
@@ -86,20 +138,57 @@ color:white;
 
 <body>
 
-<div class="header">
-<h1>Publications</h1>
-<p>Research Articles and Scientific Contributions</p>
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<img src="profile.png">
+
+<h2>Amit Patil</h2>
+
+<p>
+Postdoctoral Researcher<br>
+Institute of Urban Environment<br>
+Chinese Academy of Sciences
+</p>
+
+<div class="links">
+
+<a href="mailto:amit@iue.ac.cn">
+<i class="fas fa-envelope"></i> Email
+</a>
+
+<a href="https://orcid.org/0000-0001-8958-3895">
+<i class="fab fa-orcid"></i> ORCID
+</a>
+
+<a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en">
+<i class="fas fa-graduation-cap"></i> Google Scholar
+</a>
+
+<a href="https://github.com/aquadatapod">
+<i class="fab fa-github"></i> GitHub
+</a>
+
 </div>
 
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
 <div class="navbar">
+
 <a href="index.html">Home</a>
 <a href="publications.html">Publications</a>
 <a href="talks.html">Talks</a>
 <a href="achievements.html">Achievements</a>
 <a href="cv.pdf">CV</a>
+
 </div>
 
-<div class="container">
+<h1>Publications</h1>
 
 <!-- Paper 1 -->
 
@@ -242,7 +331,7 @@ Biogeographic biases in microplastic ingestion research mask biodiversity and co
 </div>
 
 <p>
-S.-C. Ao, W. Cowger, V. H. Resh, M.-C. Chiu, D. Zhang, Y.-Y. Xu, 
+S.-C. Ao, W. Cowger, V. H. Resh, M.-C. Chiu, D. Zhang, Y.-Y. Xu,
 <span class="author-highlight">A. J. Patil</span>, Z.-F. Guo, X. Sun
 </p>
 
@@ -256,10 +345,10 @@ Water Research 291, 125115 (2026)
 
 </div>
 
-</div>
-
 <div class="footer">
 © Amit Patil
+</div>
+
 </div>
 
 </body>
