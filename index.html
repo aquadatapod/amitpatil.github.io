@@ -7,18 +7,10 @@
     <title>Amit Patil | Researcher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #1a5276;
-            --accent-color: #1abc9c;
-            --text-dark: #2c3e50;
-            --text-light: #546e7a;
-            --bg-light: #f8f9fa;
-        }
-
         body {
             font-family: "Helvetica Neue", Arial, sans-serif;
             margin: 0;
-            background: var(--bg-light);
+            background: #f4f6f7;
             color: #333;
             line-height: 1.6;
         }
@@ -31,192 +23,140 @@
             width: 260px;
             height: 100%;
             background: white;
-            padding: 40px 20px;
-            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.05);
+            padding: 30px 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.08);
             text-align: center;
             box-sizing: border-box;
-            z-index: 100;
         }
 
-        .sidebar img.profile-img {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 3px solid #eee;
+        /* Restored your original profile photo styling */
+        .sidebar img {
+            width: 180px;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
         }
 
         .sidebar h2 {
-            margin: 5px 0 10px 0;
-            color: var(--text-dark);
-            font-size: 22px;
+            margin: 5px 0;
+            color: #2c3e50;
         }
 
         .sidebar p {
-            font-size: 13.5px;
-            color: var(--text-light);
-            margin-bottom: 30px;
+            font-size: 14px;
+            color: #666;
         }
 
         .links {
+            margin-top: 20px;
             text-align: left;
-            padding-left: 15px;
         }
 
         .links a {
-            display: flex;
-            align-items: center;
+            display: block;
             text-decoration: none;
-            color: var(--text-dark);
-            padding: 10px 0;
-            font-size: 14.5px;
-            font-weight: 500;
-            transition: color 0.2s;
+            color: #2c3e50;
+            padding: 8px 0;
+            font-size: 15px;
         }
 
         .links a i {
-            margin-right: 12px;
+            margin-right: 10px;
             width: 20px;
-            font-size: 16px;
-            color: var(--text-light);
         }
 
         .links a:hover {
-            color: var(--accent-color);
-        }
-
-        .links a:hover i {
-            color: var(--accent-color);
+            color: #1abc9c;
         }
 
         /* MAIN CONTENT */
         .main {
-            margin-left: 260px;
-            padding: 40px 50px;
+            margin-left: 280px;
+            padding: 40px;
             max-width: 900px;
         }
 
         /* NAVBAR */
         .navbar {
-            background: white;
-            padding: 15px 30px;
-            margin-bottom: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            background: #2c3e50;
+            padding: 15px;
+            margin-bottom: 30px;
         }
 
         .navbar a {
-            color: var(--text-dark);
+            color: white;
             text-decoration: none;
-            margin-right: 30px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.2s;
+            margin-right: 25px;
+            font-weight: 500;
         }
 
         .navbar a:hover {
-            color: var(--accent-color);
+            color: #1abc9c;
         }
 
-        /* HERO AREA */
-        .hero-section {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 40px;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-text h1 {
-            margin: 0 0 15px 0;
-            color: var(--text-dark);
-            font-size: 28px;
-        }
-
-        .hero-text p {
-            font-size: 16px;
-            margin: 0;
-        }
-
-        .bird-icon {
-            width: 100px;
-            height: auto;
-            opacity: 0.8;
-        }
-
-        /* CONTENT STYLING */
-        p {
-            font-size: 15.5px;
-            color: #444;
+        /* IMAGE */
+        .bird {
+            display: block;
+            margin: auto;
+            width: 180px;
             margin-bottom: 20px;
+        }
+
+        /* TEXT */
+        h1 {
+            margin-top: 0;
+            color: #2c3e50;
         }
 
         .section-title {
             margin-top: 40px;
             margin-bottom: 20px;
-            color: var(--primary-color);
-            font-size: 20px;
+            color: #1a5276;
+            font-size: 22px;
             border-bottom: 2px solid #eef2f5;
             padding-bottom: 8px;
         }
 
         .highlight {
-            font-weight: 600;
-            color: var(--primary-color);
-            background-color: #eaf2f8;
-            padding: 2px 6px;
-            border-radius: 4px;
+            font-weight: bold;
+            color: #2c3e50;
         }
 
-        /* SKILLS GRID */
+        /* SKILLS KEYWORD GRID */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin: 20px 0 35px 0;
         }
 
         .skill-item {
             background: white;
-            padding: 15px;
+            padding: 12px 15px;
             border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-            border-left: 4px solid var(--primary-color);
-            display: flex;
-            align-items: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid #1a5276;
             font-size: 14.5px;
             font-weight: 500;
-            color: var(--text-dark);
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
         }
 
         .skill-item i {
-            margin-right: 12px;
-            color: var(--accent-color);
-            font-size: 16px;
+            margin-right: 10px;
+            color: #1abc9c;
+            width: 18px;
+            text-align: center;
         }
 
         .footer {
             margin-top: 60px;
             padding: 20px;
             text-align: center;
-            color: var(--text-light);
-            font-size: 13px;
+            color: #777;
+            font-size: 14px;
             border-top: 1px solid #eef2f5;
-        }
-
-        @media (max-width: 768px) {
-            .sidebar { position: relative; width: 100%; height: auto; padding: 30px 20px; }
-            .main { margin-left: 0; padding: 20px; }
-            .hero-section { flex-direction: column; text-align: center; }
-            .links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
         }
     </style>
 </head>
@@ -225,7 +165,7 @@
 
     <!-- SIDEBAR -->
     <div class="sidebar">
-        <img src="profile.png" alt="Amit Patil" class="profile-img">
+        <img src="profile.png" alt="Amit Patil">
         <h2>Amit Patil</h2>
         <p>
             Postdoctoral Researcher<br>
@@ -235,16 +175,16 @@
 
         <div class="links">
             <a href="mailto:amit@iue.ac.cn"><i class="fas fa-envelope"></i>Email</a>
-            <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank"><i class="fab fa-researchgate"></i>ResearchGate</a>[cite: 1]
+            <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank"><i class="fab fa-researchgate"></i>ResearchGate</a>
             <a href="https://orcid.org/0000-0001-8958-3895" target="_blank"><i class="fab fa-orcid"></i>ORCID</a>
             <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
             <a href="https://github.com/aquadatapod" target="_blank"><i class="fab fa-github"></i>GitHub</a>
         </div>
     </div>
 
-    <!-- MAIN CONTENT CONTAINER -->
+    <!-- MAIN CONENT -->
     <div class="main">
-        
+
         <div class="navbar">
             <a href="index.html">Home</a>
             <a href="publications.html">Publications</a>
@@ -253,50 +193,55 @@
             <a href="cv.html">CV</a>
         </div>
 
-        <!-- HERO HEADER -->
-        <div class="hero-section">
-            <div class="hero-text">
-                <h1>About Me</h1>
-                <p>
-                    I am an ecologist working at the intersection of 
-                    <span class="highlight">Macroecology</span>, 
-                    <span class="highlight">Aquatic Ecology</span>, 
-                    <span class="highlight">Pollution Ecology</span>, and 
-                    <span class="highlight">Ecological Data Science</span>.[cite: 1]
-                </p>
-            </div>
-            <img src="bird.png" class="bird-icon" alt="Bird Silhouette">
-        </div>
+        <img src="bird.png" class="bird" alt="Bird Silhouette">
 
-        <!-- CORE COMPETENCIES (NEW) -->
+        <h1>About Me</h1>
+
+        <p>
+            I am a researcher working at the intersection of 
+            <span class="highlight">Macroecology</span>, 
+            <span class="highlight">Aquatic Ecology</span>, 
+            <span class="highlight">Pollution Ecology</span>, and 
+            <span class="highlight">Ecological Data Science</span>. 
+            My research investigates how environmental drivers and emerging pollutants shape biodiversity patterns across aquatic and semi-aquatic ecosystems.
+        </p>
+
+        <!-- NEW CORE COMPETENCIES GRID -->
         <h2 class="section-title">Core Competencies</h2>
         <div class="skills-grid">
-            <div class="skill-item"><i class="fas fa-feather-alt"></i>Seabird & Coastal Bird Ecology</div>
-            <div class="skill-item"><i class="fas fa-network-wired"></i>Structural Equation Modelling (piecewiseSEM)</div>
-            <div class="skill-item"><i class="fas fa-calculator"></i>Generalized & Hierarchical Modelling</div>
-            <div class="skill-item"><i class="fas fa-database"></i>Large-scale Ecological Data Synthesis</div>
-            <div class="skill-item"><i class="fas fa-flask"></i>Pollutant & Contaminant Ecology in Wildlife</div>
-            <div class="skill-item"><i class="fas fa-pen-fancy"></i>Scientific Writing & Mentoring</div>
-            <div class="skill-item"><i class="fas fa-comments"></i>English & Chinese Research Communication</div>
+            <div class="skill-item"><i class="fas fa-feather-alt"></i>Seabird and coastal bird ecology</div>
+            <div class="skill-item"><i class="fas fa-network-wired"></i>Structural equation modelling (piecewiseSEM, R)</div>
+            <div class="skill-item"><i class="fas fa-calculator"></i>Generalized/hierarchical modelling</div>
+            <div class="skill-item"><i class="fas fa-database"></i>Large-scale ecological data synthesis</div>
+            <div class="skill-item"><i class="fas fa-flask"></i>Pollutant and contaminant ecology in wildlife</div>
+            <div class="skill-item"><i class="fas fa-pen-fancy"></i>Scientific writing & mentoring</div>
+            <div class="skill-item"><i class="fas fa-comments"></i>English/Chinese research communication</div>
         </div>
 
-        <!-- DETAILED PROFILE -->
-        <h2 class="section-title">Research Focus</h2>
         <p>
-            My research investigates how environmental drivers and emerging anthropogenic pressures shape biodiversity patterns across aquatic and semi-aquatic ecosystems. I specialize in uncovering macro-level patterns that govern species distribution, behavioral dynamics, and functional traits across global scales.[cite: 1]
-        </p>
-        <p>
-            A substantial component of my current portfolio examines the ecological implications of <span class="highlight">microplastics and emerging chemical variants</span> cascading through trophic networks. By leveraging large datasets, global reviews, and multi-taxa frameworks, my work captures macroecological responses across diverse wildlife communities, spanning macroinvertebrates, shrimp, aquatic systems, and avian fauna.[cite: 1]
+            My work focuses on understanding how organisms interact with their environments and how both natural processes and human activities influence the distribution, traits, and ecological functioning of species. I study multiple faunal groups including <span class="highlight">macroinvertebrates, shrimp, aquatic invertebrates, birds, amphibians, and other wildlife</span> to understand ecological responses across taxa and ecosystems.
         </p>
 
-        <!-- PHD SECTION -->
-        <h2 class="section-title">PhD Dissertation</h2>
         <p>
-            My doctoral research extensively explored the structural and functional configurations of <span class="highlight">riverine macroinvertebrate communities</span> within naturally occurring, repeated mesohabitats across the Wei River Basin (Shaanxi Province, Northwest China)[cite: 1]. The work established robust piecewise structural equation models (`piecewiseSEM`) to decouple complex environmental variables and isolate the core drivers shaping distribution arrays in river basins[cite: 1].
+            A major component of my current research examines the ecology and movement of <span class="highlight">microplastics and other emerging pollutants</span> across food webs. Using large ecological datasets, trait-based approaches, and statistical modeling, I aim to uncover global patterns of pollutant exposure and vulnerability among species.
+        </p>
+
+        <p>
+            More broadly, my research integrates <span class="highlight">biodiversity synthesis, ecological modeling, and data-driven analysis</span> to understand environmental change in the Anthropocene and its consequences for ecological communities.
+        </p>
+
+        <p>
+            In addition to research, I am actively involved in teaching and mentoring students, supporting ecological data analysis, and training young researchers in scientific writing and quantitative ecology.
+        </p>
+
+        <h2 class="section-title">PhD Dissertation</h2>
+
+        <p>
+            My doctoral research investigated the ecological functioning of <span class="highlight">riverine macroinvertebrate communities</span> across different mesohabitats in the Wei River Basin, Shaanxi Province, Northwest China. The work applied advanced statistical approaches, including <span class="highlight">piecewise structural equation modeling (piecewiseSEM)</span>, to understand how environmental drivers shape macroinvertebrate community patterns in river ecosystems.
         </p>
 
         <div class="footer">
-            © 2026 Amit Patil | Built via GitHub Pages
+            © Amit Patil | Built via GitHub Pages
         </div>
 
     </div>
