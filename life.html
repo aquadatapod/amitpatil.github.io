@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amit Patil | Life Beyond Research</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100%;
+            background: white;
+            padding: 30px 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .sidebar img {
+            width: 180px;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h2 {
+            margin: 5px 0;
+            color: #2c3e50;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .links {
+            margin-top: 22px;
+            text-align: left;
+        }
+
+        .links a {
+            display: block;
+            text-decoration: none;
+            color: #2c3e50;
+            padding: 8px 0;
+            font-size: 15px;
+        }
+
+        .links a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .links a:hover {
+            color: #1abc9c;
+        }
+
+        /* MAIN */
+
+        .main {
+            margin-left: 280px;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 18px;
+            margin-bottom: 35px;
+            border-radius: 4px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 22px;
+            font-weight: 500;
+            font-size: 14.5px;
+        }
+
+        .navbar a:hover {
+            color: #1abc9c;
+        }
+
+        /* HEADINGS */
+
+        h1 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 32px;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            margin-top: 45px;
+            margin-bottom: 20px;
+            color: #1a5276;
+            font-size: 23px;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 8px;
+        }
+
+        /* INTEREST CARDS */
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 22px;
+            border-radius: 7px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+            border-top: 3px solid #1a5276;
+        }
+
+        .interest-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .interest-card h3 i {
+            color: #1abc9c;
+            margin-right: 9px;
+        }
+
+        .interest-card p {
+            font-size: 14.5px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* SIMPLE NOTE */
+
+        .note {
+            background: white;
+            padding: 22px 24px;
+            border-left: 4px solid #1abc9c;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+        }
+
+        .note p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            border-top: 1px solid #eef2f5;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 25px 20px;
+            }
+
+            .sidebar img {
+                width: 150px;
+            }
+
+            .links {
+                text-align: center;
+            }
+
+            .links a {
+                display: inline-block;
+                margin: 0 8px;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 25px 20px;
+                max-width: none;
+            }
+
+            .navbar {
+                line-height: 2;
+            }
+
+            .navbar a {
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <img src="profile.png" alt="Amit Patil">
+
+        <h2>Amit Patil</h2>
+
+        <p>
+            Postdoctoral Researcher<br>
+            Institute of Urban Environment<br>
+            Chinese Academy of Sciences
+        </p>
+
+        <div class="links">
+
+            <a href="mailto:amit@iue.ac.cn">
+                <i class="fas fa-envelope"></i>Email
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank">
+                <i class="fab fa-researchgate"></i>ResearchGate
+            </a>
+
+            <a href="https://orcid.org/0000-0001-8958-3895" target="_blank">
+                <i class="fab fa-orcid"></i>ORCID
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en" target="_blank">
+                <i class="fas fa-graduation-cap"></i>Google Scholar
+            </a>
+
+            <a href="https://github.com/aquadatapod" target="_blank">
+                <i class="fab fa-github"></i>GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <div class="navbar">
+
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="talks.html">Talks</a>
+            <a href="news.html">News & Events</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="cv.html">CV</a>
+            <a href="life.html">Life Beyond Research</a>
+
+        </div>
+
+
+        <h1>Life Beyond Research</h1>
+
+        <p class="intro">
+            Research is a major part of my life, but curiosity does not stop at the
+            laboratory or field site. This space is a collection of interests,
+            experiences, and moments that connect with the way I see and explore the world.
+        </p>
+
+
+        <!-- PHOTOGRAPHY -->
+
+        <h2 class="section-title">Photography</h2>
+
+        <div class="interest-card">
+
+            <h3>
+                <i class="fas fa-camera"></i>
+                Seeing the world through a camera
+            </h3>
+
+            <p>
+                Photography is one of the ways I slow down and observe the details of
+                landscapes, wildlife, people, and everyday environments. I particularly
+                enjoy photographing natural environments and the small ecological stories
+                that are often easy to overlook.
+            </p>
+
+        </div>
+
+
+        <!-- NATURE -->
+
+        <h2 class="section-title">Nature & Exploration</h2>
+
+        <div class="interest-card">
+
+            <h3>
+                <i class="fas fa-mountain-sun"></i>
+                Exploring natural environments
+            </h3>
+
+            <p>
+                Time spent outdoors often provides a different perspective on ecology.
+                Exploring forests, rivers, wetlands, coastlines, and other natural
+                environments continues to shape my curiosity beyond formal research.
+            </p>
+
+        </div>
+
+
+        <!-- DIVING -->
+
+        <h2 class="section-title">Underwater</h2>
+
+        <div class="interest-card">
+
+            <h3>
+                <i class="fas fa-water"></i>
+                Exploring beneath the surface
+            </h3>
+
+            <p>
+                Diving offers another way of experiencing aquatic environments directly.
+                Underwater landscapes, marine life, and the complexity of aquatic ecosystems
+                are a continuing source of curiosity and inspiration.
+            </p>
+
+        </div>
+
+
+        <!-- TRAVEL -->
+
+        <h2 class="section-title">Travel & Field Experiences</h2>
+
+        <div class="interest-card">
+
+            <h3>
+                <i class="fas fa-route"></i>
+                Places, people, and experiences
+            </h3>
+
+            <p>
+                Research and travel have taken me to different environments and communities.
+                I enjoy documenting these experiences, particularly the connections between
+                landscapes, cultures, and the natural world.
+            </p>
+
+        </div>
+
+
+        <!-- NOTE -->
+
+        <h2 class="section-title">A Space Outside Academia</h2>
+
+        <div class="note">
+
+            <p>
+                This page will gradually grow with photographs, field memories,
+                interesting places, and other experiences that have become part of
+                my journey beyond academic work.
+            </p>
+
+        </div>
+
+
+        <div class="footer">
+            © Amit Patil | Built with GitHub Pages
+        </div>
+
+    </div>
+
+</body>
+
+</html>
