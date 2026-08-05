@@ -1,404 +1,716 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
 
-<title>Publications | Amit Patil</title>
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Amit Patil | Publications</title>
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f6f7;
-}
+    body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f7;
+        color: #333;
+        line-height: 1.6;
+    }
 
-/* SIDEBAR */
+    /* =========================
+       SIDEBAR
+    ========================== */
 
-.sidebar{
-position:fixed;
-left:0;
-top:0;
-width:260px;
-height:100%;
-background:white;
-padding:30px 20px;
-box-shadow:2px 0 8px rgba(0,0,0,0.08);
-text-align:center;
-}
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        background: white;
+        padding: 30px 20px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-.sidebar img{
-width:180px;
-height:auto;
-border-radius:6px;
-margin-bottom:15px;
-}
+    .sidebar img {
+        width: 180px;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
 
-.sidebar h2{
-margin:10px 0 5px 0;
-}
+    .sidebar h2 {
+        margin: 5px 0;
+        color: #2c3e50;
+        font-size: 24px;
+    }
 
-.sidebar p{
-font-size:14px;
-color:#555;
-}
+    .sidebar p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
 
-.links{
-margin-top:20px;
-text-align:left;
-}
+    .links {
+        margin-top: 22px;
+        text-align: left;
+    }
 
-.links a{
-display:block;
-text-decoration:none;
-color:#2c3e50;
-padding:8px 0;
-}
+    .links a {
+        display: block;
+        text-decoration: none;
+        color: #2c3e50;
+        padding: 8px 0;
+        font-size: 15px;
+        transition: color 0.2s ease;
+    }
 
-.links a i{
-margin-right:10px;
-}
+    .links a i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
 
-.links a:hover{
-color:#1abc9c;
-}
+    .links a:hover {
+        color: #1abc9c;
+    }
 
-/* MAIN CONTENT */
+    /* =========================
+       MAIN CONTENT
+    ========================== */
 
-.main{
-margin-left:280px;
-padding:40px;
-}
+    .main {
+        margin-left: 280px;
+        padding: 40px;
+        max-width: 1000px;
+    }
 
-/* NAVBAR */
+    /* =========================
+       NAVIGATION
+    ========================== */
 
-.navbar{
-background:#2c3e50;
-padding:15px;
-margin-bottom:30px;
-}
+    .navbar {
+        background: #2c3e50;
+        padding: 15px 18px;
+        margin-bottom: 35px;
+        border-radius: 4px;
+    }
 
-.navbar a{
-color:white;
-text-decoration:none;
-margin-right:25px;
-font-weight:bold;
-}
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-right: 22px;
+        font-weight: 500;
+        font-size: 14.5px;
+        transition: color 0.2s ease;
+    }
 
-.navbar a:hover{
-color:#1abc9c;
-}
+    .navbar a:hover {
+        color: #1abc9c;
+    }
 
-/* PUBLICATION STYLE */
+    /* =========================
+       PAGE HEADING
+    ========================== */
 
-.paper{
-margin-bottom:30px;
-padding-bottom:15px;
-border-bottom:1px solid #ddd;
-line-height:1.6;
-}
+    h1 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #2c3e50;
+        font-size: 32px;
+    }
 
-.title{
-color:#1a5276;
-font-weight:bold;
-text-decoration:underline;
-font-size:18px;
-}
+    .intro {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
 
-.author-highlight{
-font-weight:bold;
-color:#c0392b;
-}
+    /* =========================
+       SECTION TITLES
+    ========================== */
 
-.journal{
-font-style:italic;
-color:#555;
-}
+    .section-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: #1a5276;
+        font-size: 23px;
+        border-bottom: 2px solid #eef2f5;
+        padding-bottom: 8px;
+    }
 
-.link a{
-color:#1abc9c;
-text-decoration:none;
-}
+    /* =========================
+       PUBLICATION
+    ========================== */
 
-.link a:hover{
-text-decoration:underline;
-}
+    .paper {
+        background: white;
+        padding: 20px 23px;
+        margin-bottom: 16px;
+        border-left: 4px solid #1abc9c;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
 
-.footer{
-margin-top:50px;
-color:#777;
-font-size:14px;
-}
+    .title {
+        margin-bottom: 9px;
+    }
+
+    .title a {
+        color: #1a5276;
+        font-weight: 600;
+        font-size: 17px;
+        text-decoration: none;
+        line-height: 1.45;
+    }
+
+    .title a:hover {
+        color: #1abc9c;
+        text-decoration: underline;
+    }
+
+    .authors {
+        margin: 0 0 7px 0;
+        font-size: 14.5px;
+        color: #444;
+    }
+
+    .author-highlight {
+        font-weight: bold;
+        color: #c0392b;
+    }
+
+    .journal {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer {
+        margin-top: 60px;
+        padding: 20px;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+        border-top: 1px solid #eef2f5;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+        .sidebar {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 25px 20px;
+        }
+
+        .sidebar img {
+            width: 150px;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .main {
+            margin-left: 0;
+            padding: 25px 20px;
+            max-width: none;
+        }
+
+        .navbar {
+            line-height: 2;
+        }
+
+        .navbar a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .title a {
+            font-size: 16px;
+        }
+
+        .paper {
+            padding: 18px;
+        }
+    }
 
 </style>
+```
 
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
+```
+<!-- =========================
+     SIDEBAR
+========================== -->
 
 <div class="sidebar">
 
-<img src="profile.png">
+    <img src="profile.png" alt="Amit Patil">
 
-<h2>Amit Patil</h2>
+    <h2>Amit Patil</h2>
 
-<p>
-Postdoctoral Researcher<br>
-Institute of Urban Environment<br>
-Chinese Academy of Sciences
-</p>
+    <p>
+        Postdoctoral Researcher<br>
+        Institute of Urban Environment<br>
+        Chinese Academy of Sciences
+    </p>
 
-<div class="links">
+    <div class="links">
 
-<a href="mailto:amit@iue.ac.cn">
-<i class="fas fa-envelope"></i> Email
-</a>
+        <a href="mailto:amit@iue.ac.cn">
+            <i class="fas fa-envelope"></i>Email
+        </a>
 
-<a href="https://orcid.org/0000-0001-8958-3895">
-<i class="fab fa-orcid"></i> ORCID
-</a>
+        <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank">
+            <i class="fab fa-researchgate"></i>ResearchGate
+        </a>
 
-<a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en">
-<i class="fas fa-graduation-cap"></i> Google Scholar
-</a>
+        <a href="https://orcid.org/0000-0001-8958-3895" target="_blank">
+            <i class="fab fa-orcid"></i>ORCID
+        </a>
 
-<a href="https://github.com/aquadatapod">
-<i class="fab fa-github"></i> GitHub
-</a>
+        <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en" target="_blank">
+            <i class="fas fa-graduation-cap"></i>Google Scholar
+        </a>
+
+        <a href="https://github.com/aquadatapod" target="_blank">
+            <i class="fab fa-github"></i>GitHub
+        </a>
+
+    </div>
 
 </div>
 
-</div>
 
-<!-- MAIN -->
+<!-- =========================
+     MAIN CONTENT
+========================== -->
 
 <div class="main">
 
-<div class="navbar">
+    <!-- NAVIGATION -->
 
-<a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
-<a href="talks.html">Talks</a>
-<a href="achievements.html">Achievements</a>
-<a href="cv.html">CV</a>
+    <div class="navbar">
+
+        <a href="index.html">Home</a>
+
+        <a href="research.html">Research</a>
+
+        <a href="publications.html">Publications</a>
+
+        <a href="talks.html">Talks</a>
+
+        <a href="news.html">News & Events</a>
+
+        <a href="achievements.html">Achievements</a>
+
+        <a href="cv.html">CV</a>
+
+        <a href="life.html">Life Beyond Research</a>
+
+    </div>
+
+
+    <!-- PAGE INTRODUCTION -->
+
+    <h1>Publications</h1>
+
+    <p class="intro">
+        My publications span macroecology, aquatic ecology, pollution ecology,
+        biodiversity, and environmental research, combining field observations,
+        ecological synthesis, and quantitative approaches.
+    </p>
+
+
+    <!-- =========================
+         2026
+    ========================== -->
+
+    <h2 class="section-title">2026</h2>
+
+
+    <!-- Paper -->
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.70322/jwe.2026.10012"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Trait number and coding shape estimates of functional diversity
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            Si-Cheng, A., Xin-Yi, L., <span class="author-highlight">Amit, J. P.</span>,
+            Ming-Chih, C., & Qing-Hua, C.
+
+        </p>
+
+        <p class="journal">
+
+            <em>Journal of Watershed Ecology</em> 1(2), 10012–10012 (2026)
+
+        </p>
+
+    </div>
+
+
+    <!-- Paper -->
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.1016/j.envpol.2026.128645"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Gradient-boosting threshold identification for developmental toxicity:
+                A BPAF case-study framework for early-stage risk assessment
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            C.C. Iheanacho, D. Zhang, Y.-Y. Xu,
+            <span class="author-highlight">A. J. Patil</span>,
+            N. K. Ayiera, S.A. Sethar
+
+        </p>
+
+        <p class="journal">
+
+            <em>Environmental Pollution</em> 406, 128645 (2026)
+
+        </p>
+
+    </div>
+
+
+    <!-- Paper -->
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://pubs.acs.org/doi/10.1021/acsestwater.5c01459"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Multiscale Contrasts in Occurrences and Patterns of Pesticide
+                Contamination between River Water and Groundwater
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            A. Melnikova, Z.-F. Guo, R.I. Woolway, S.-C. Ao,
+            <span class="author-highlight">A. J. Patil</span>,
+            K.N. Ayiera, Y.-Y. Xu
+
+        </p>
+
+        <p class="journal">
+
+            <em>ACS ES&T Water</em> 5c01459 (2026)
+
+        </p>
+
+    </div>
+
+
+    <!-- Paper -->
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.1016/j.watres.2025.125115"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Biogeographic biases in microplastic ingestion research mask
+                biodiversity and consumption risks across benthic invertebrates
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            S.-C. Ao, W. Cowger, V. H. Resh, M.-C. Chiu, D. Zhang,
+            Y.-Y. Xu, <span class="author-highlight">A. J. Patil</span>,
+            Z.-F. Guo, X. Sun
+
+        </p>
+
+        <p class="journal">
+
+            <em>Water Research</em> 291, 125115 (2026)
+
+        </p>
+
+    </div>
+
+
+    <!-- Paper -->
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.1016/j.rsma.2026.104886"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Global research trends on heavy metal contamination in bivalve
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            S. Gavas, <span class="author-highlight">A. J. Patil*</span>, M. Gurav
+
+        </p>
+
+        <p class="journal">
+
+            <em>Regional Studies in Marine Science</em> 96, 104886 (2026)
+
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         2023
+    ========================== -->
+
+    <h2 class="section-title">2023</h2>
+
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.1007/s11356-022-25030-0"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Moving beyond traditional macrofaunal community structure studies
+                in the Indian Ocean continental shelf: a research synthesis based
+                on research weaving
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            S. K. Sivadas, <span class="author-highlight">A. J. Patil</span>
+
+        </p>
+
+        <p class="journal">
+
+            <em>Environmental Science and Pollution Research</em>
+            30, 19536–19563 (2023)
+
+        </p>
+
+    </div>
+
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.1016/j.ecohyd.2022.10.001"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Understanding the effect of environment on macrobenthic invertebrate
+                in naturally occurring repeated mesohabitats from the warm-temperate zone river
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            <span class="author-highlight">A. J. Patil</span>,
+            Z. Wang, X. He, P. Li, T. Yan, H. Li
+
+        </p>
+
+        <p class="journal">
+
+            <em>Ecohydrology & Hydrobiology</em> 23, 66–78 (2023)
+
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         2019
+    ========================== -->
+
+    <h2 class="section-title">2019</h2>
+
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.1038/d41586-019-03207-x"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                China’s ‘silicon valley’ must not trash its environment
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            Z. Wang, H. Li, <span class="author-highlight">A. Patil</span>
+
+        </p>
+
+        <p class="journal">
+
+            <em>Nature</em> 574, 486–486 (2019)
+
+        </p>
+
+    </div>
+
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://doi.org/10.21276/ambi.2019.06.2.nn01"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Record of a Few Pelagic Bird Sightings along Sindhudurg Coast, Maharashtra
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            <span class="author-highlight">A. J. Patil</span>,
+            B. Shirke, G. B. Rao, S. Babu, G. Quadros
+
+        </p>
+
+        <p class="journal">
+
+            <em>AMBI</em> 06 & 06h (2019)
+
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         2016
+    ========================== -->
+
+    <h2 class="section-title">2016</h2>
+
+
+    <div class="paper">
+
+        <div class="title">
+
+            <a href="https://www.currentscience.ac.in/Volumes/111/05/0792.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Unusual weather condition causing the transfer of seahorses
+                Hippocampus kuda onto the sandy beach of Sindhudurg district,
+                Maharashtra
+
+            </a>
+
+        </div>
+
+        <p class="authors">
+
+            <span class="author-highlight">A. J. Patil</span>,
+            B. Shirke, G. B. Rao, S. Babu, G. Quadros
+
+        </p>
+
+        <p class="journal">
+
+            <em>Current Science</em> 111, 792–793 (2016)
+
+        </p>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © Amit Patil | Built with GitHub Pages
+
+    </div>
 
 </div>
-
-<h1>Publications</h1>
-
-<!-- New Paper  -->
-
-<div class="paper">
-
-<div class="title">
-Gradient-boosting threshold identification for developmental toxicity: A BPAF case-study framework for early-stage risk assessment
-</div>
-  
-</p>
-C.C. Iheanacho, D. Zhang, Y.-Y. Xu, <span class="author-highlight">A. J. Patil</span>, N. K. Ayiera, S.A. Sethar
-<p>
-  
-<p class="journal">
-Environmental Pollutiona 406, 128645 (2026)
-</p>
-
-<p class="link">
-<a href="https://doi.org/10.1016/j.envpol.2026.128645" target="_blank">Accessible here</a>
-</p>
-
-</div>
-<!-- New Paper  -->
-
-<div class="paper">
-
-<div class="title">
-Multiscale Contrasts in Occurrences and Patterns of Pesticide Contamination between River Water and Groundwater
-</div>
-
-<p>
-A. Melnikova, Z.-F. Guo,R.I. Woolway, S.-C. Ao, <span class="author-highlight">A. J. Patil</span>, K.N. Ayiera, Y.-Y. Xu
-</p>
-
-<p class="journal">
-ACS ES&T Water 5c01459 (2026)
-</p>
-
-<p class="link">
-<a href="https://pubs.acs.org/doi/10.1021/acsestwater.5c01459" target="_blank">Accessible here</a>
-</p>
-
-</div>
-  
-<!-- Paper 1 -->
-
-<div class="paper">
-
-<div class="title">
-Biogeographic biases in microplastic ingestion research mask biodiversity and consumption risks across benthic invertebrates
-</div>
-
-<p>
-S.-C. Ao, W. Cowger, V. H. Resh, M.-C. Chiu, D. Zhang, Y.-Y. Xu,
-<span class="author-highlight">A. J. Patil</span>, Z.-F. Guo, X. Sun
-</p>
-
-<p class="journal">
-Water Research 291, 125115 (2026)
-</p>
-
-<p class="link">
-<a href="https://doi.org/10.1016/j.watres.2025.125115" target="_blank">Accessible here</a>
-</p>
-
-</div>
-
-
-<!-- Paper 2 -->
-
-<div class="paper">
-
-<div class="title">
-Global research trends on heavy metal contamination in bivalve
-</div>
-
-<p>
-S. Gavas, <span class="author-highlight">A. J. Patil*</span>, M. Gurav
-</p>
-
-<p class="journal">
-Regional Studies in Marine Science 96, 104886 (2026)
-</p>
-
-<p class="link">
-<a href="https://doi.org/10.1016/j.rsma.2026.104886" target="_blank">Accessible here</a>
-</p>
-
-</div>
-
-
-<!-- Paper 3 -->
-
-<div class="paper">
-
-<div class="title">
-Moving beyond traditional macrofaunal community structure studies in the Indian Ocean continental shelf: a research synthesis based on research weaving
-</div>
-
-<p>
-S. K. Sivadas, <span class="author-highlight">A. J. Patil</span>
-</p>
-
-<p class="journal">
-Environmental Science and Pollution Research 30, 19536–19563 (2023)
-</p>
-
-<p class="link">
-<a href="https://doi.org/10.1007/s11356-022-25030-0" target="_blank">Accessible here</a>
-</p>
-
-</div>
-
-
-<!-- Paper 4 -->
-
-<div class="paper">
-
-<div class="title">
-Understanding the effect of environment on macrobenthic invertebrate in naturally occurring repeated mesohabitats from the warm-temperate zone river
-</div>
-
-<p>
-<span class="author-highlight">A. J. Patil</span>, Z. Wang, X. He, P. Li, T. Yan, H. Li
-</p>
-
-<p class="journal">
-Ecohydrology & Hydrobiology 23, 66–78 (2023)
-</p>
-
-<p class="link">
-<a href="https://doi.org/10.1016/j.ecohyd.2022.10.001" target="_blank">Accessible here</a>
-</p>
-
-</div>
-
-
-<!-- Paper 5 -->
-
-<div class="paper">
-
-<div class="title">
-China’s ‘silicon valley’ must not trash its environment
-</div>
-
-<p>
-Z. Wang, H. Li, <span class="author-highlight">A. Patil</span>
-</p>
-
-<p class="journal">
-Nature 574, 486–486 (2019)
-</p>
-
-<p class="link">
-<a href="https://doi.org/10.1038/d41586-019-03207-x" target="_blank">Accessible here</a>
-</p>
-
-</div>
-
-
-<!-- Paper 6 -->
-
-<div class="paper">
-
-<div class="title">
-Record of a Few Pelagic Bird Sightings along Sindhudurg Coast, Maharashtra
-</div>
-
-<p>
-<span class="author-highlight">A. J. Patil</span>, B. Shirke, G. B. Rao, S. Babu, G. Quadros
-</p>
-
-<p class="journal">
-AMBI 06 & 06h (2019)
-</p>
-
-<p class="link">
-<a href="https://doi.org/10.21276/ambi.2019.06.2.nn01" target="_blank">Accessible here</a>
-</p>
-
-</div>
-
-
-<!-- Paper 7 -->
-
-<div class="paper">
-
-<div class="title">
-Unusual weather condition causing the transfer of seahorses Hippocampus kuda onto the sandy beach of Sindhudurg district, Maharashtra
-</div>
-
-<p>
-<span class="author-highlight">A. J. Patil</span>, B. Shirke, G. B. Rao, S. Babu, G. Quadros
-</p>
-
-<p class="journal">
-Current Science 111, 792–793 (2016)
-</p>
-
-<p class="link">
-<a href="https://www.currentscience.ac.in/Volumes/111/05/0792.pdf" target="_blank">Accessible here</a>
-</p>
-
-</div>
-  
-<div class="footer">
-© Amit Patil
-</div>
-
-</div>
+```
 
 </body>
 
