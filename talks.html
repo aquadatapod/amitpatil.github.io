@@ -1,258 +1,647 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
 
-<title>Talks | Amit Patil</title>
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Amit Patil | Talks & Academic Engagement</title>
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f6f7;
-}
+    body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f7;
+        color: #333;
+        line-height: 1.6;
+    }
 
-/* SIDEBAR */
+    /* =========================
+       SIDEBAR
+    ========================== */
 
-.sidebar{
-position:fixed;
-left:0;
-top:0;
-width:260px;
-height:100%;
-background:white;
-padding:30px 20px;
-box-shadow:2px 0 8px rgba(0,0,0,0.08);
-text-align:center;
-}
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        background: white;
+        padding: 30px 20px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-.sidebar img{
-width:180px;
-height:auto;
-border-radius:6px;
-margin-bottom:15px;
-}
+    .sidebar img {
+        width: 180px;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
 
-.sidebar h2{
-margin:10px 0 5px 0;
-}
+    .sidebar h2 {
+        margin: 5px 0;
+        color: #2c3e50;
+        font-size: 24px;
+    }
 
-.sidebar p{
-font-size:14px;
-color:#555;
-}
+    .sidebar p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
 
-.links{
-margin-top:20px;
-text-align:left;
-}
+    .links {
+        margin-top: 22px;
+        text-align: left;
+    }
 
-.links a{
-display:block;
-text-decoration:none;
-color:#2c3e50;
-padding:8px 0;
-}
+    .links a {
+        display: block;
+        text-decoration: none;
+        color: #2c3e50;
+        padding: 8px 0;
+        font-size: 15px;
+        transition: color 0.2s ease;
+    }
 
-.links a i{
-margin-right:10px;
-}
+    .links a i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
 
-.links a:hover{
-color:#1abc9c;
-}
+    .links a:hover {
+        color: #1abc9c;
+    }
 
-/* MAIN */
+    /* =========================
+       MAIN CONTENT
+    ========================== */
 
-.main{
-margin-left:280px;
-padding:40px;
-}
+    .main {
+        margin-left: 280px;
+        padding: 40px;
+        max-width: 1000px;
+    }
 
-/* NAVBAR */
+    /* =========================
+       NAVIGATION
+    ========================== */
 
-.navbar{
-background:#2c3e50;
-padding:15px;
-margin-bottom:30px;
-}
+    .navbar {
+        background: #2c3e50;
+        padding: 15px 18px;
+        margin-bottom: 35px;
+        border-radius: 4px;
+    }
 
-.navbar a{
-color:white;
-text-decoration:none;
-margin-right:25px;
-font-weight:bold;
-}
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-right: 22px;
+        font-weight: 500;
+        font-size: 14.5px;
+        transition: color 0.2s ease;
+    }
 
-.navbar a:hover{
-color:#1abc9c;
-}
+    .navbar a:hover {
+        color: #1abc9c;
+    }
 
-/* TALKS */
+    /* =========================
+       PAGE HEADING
+    ========================== */
 
-.talk{
-margin-bottom:30px;
-padding-bottom:15px;
-border-bottom:1px solid #ddd;
-}
+    h1 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #2c3e50;
+        font-size: 32px;
+    }
 
-.title{
-font-size:18px;
-font-weight:bold;
-color:#1a5276;
-}
+    .intro {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
 
-.role{
-color:#444;
-margin-top:5px;
-}
+    /* =========================
+       SECTION TITLES
+    ========================== */
 
-.location{
-color:#777;
-margin-top:5px;
-}
+    .section-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: #1a5276;
+        font-size: 23px;
+        border-bottom: 2px solid #eef2f5;
+        padding-bottom: 8px;
+    }
 
-.year{
-color:#1abc9c;
-font-weight:bold;
-margin-top:5px;
-}
+    /* =========================
+       TALK CARDS
+    ========================== */
 
-/* FOOTER */
+    .talk {
+        background: white;
+        padding: 20px 23px;
+        margin-bottom: 16px;
+        border-left: 4px solid #1abc9c;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
 
-.footer{
-margin-top:50px;
-color:#777;
-font-size:14px;
-}
+    .talk-title {
+        color: #1a5276;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 1.45;
+        margin-bottom: 8px;
+    }
+
+    .role {
+        font-size: 14.5px;
+        color: #444;
+        margin-bottom: 4px;
+    }
+
+    .location {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 4px;
+    }
+
+    .year {
+        font-size: 13px;
+        color: #1abc9c;
+        font-weight: bold;
+    }
+
+    /* =========================
+       FEATURED 2026 TALKS
+    ========================== */
+
+    .featured {
+        border-left: 4px solid #1a5276;
+    }
+
+    .featured .talk-title {
+        font-size: 18px;
+    }
+
+    .tag {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 3px 9px;
+        background: #eef2f5;
+        color: #555;
+        border-radius: 12px;
+        font-size: 12px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer {
+        margin-top: 60px;
+        padding: 20px;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+        border-top: 1px solid #eef2f5;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+        .sidebar {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 25px 20px;
+        }
+
+        .sidebar img {
+            width: 150px;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .main {
+            margin-left: 0;
+            padding: 25px 20px;
+            max-width: none;
+        }
+
+        .navbar {
+            line-height: 2;
+        }
+
+        .navbar a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .talk {
+            padding: 18px;
+        }
+
+    }
 
 </style>
+```
 
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
+```
+<!-- =========================
+     SIDEBAR
+========================== -->
 
 <div class="sidebar">
 
-<img src="profile.png">
+    <img src="profile.png" alt="Amit Patil">
 
-<h2>Amit Patil</h2>
+    <h2>Amit Patil</h2>
 
-<p>
-Postdoctoral Researcher<br>
-Institute of Urban Environment<br>
-Chinese Academy of Sciences
-</p>
+    <p>
+        Postdoctoral Researcher<br>
+        Institute of Urban Environment<br>
+        Chinese Academy of Sciences
+    </p>
 
-<div class="links">
+    <div class="links">
 
-<a href="mailto:amit@iue.ac.cn">
-<i class="fas fa-envelope"></i> Email
-</a>
+        <a href="mailto:amit@iue.ac.cn">
+            <i class="fas fa-envelope"></i>Email
+        </a>
 
-<a href="https://orcid.org/0000-0001-8958-3895">
-<i class="fab fa-orcid"></i> ORCID
-</a>
+        <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank">
+            <i class="fab fa-researchgate"></i>ResearchGate
+        </a>
 
-<a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en">
-<i class="fas fa-graduation-cap"></i> Google Scholar
-</a>
+        <a href="https://orcid.org/0000-0001-8958-3895" target="_blank">
+            <i class="fab fa-orcid"></i>ORCID
+        </a>
 
-<a href="https://github.com/aquadatapod">
-<i class="fab fa-github"></i> GitHub
-</a>
+        <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en" target="_blank">
+            <i class="fas fa-graduation-cap"></i>Google Scholar
+        </a>
+
+        <a href="https://github.com/aquadatapod" target="_blank">
+            <i class="fab fa-github"></i>GitHub
+        </a>
+
+    </div>
 
 </div>
 
-</div>
 
-<!-- MAIN -->
+<!-- =========================
+     MAIN CONTENT
+========================== -->
 
 <div class="main">
 
-<div class="navbar">
-<a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
-<a href="talks.html">Talks</a>
-<a href="achievements.html">Achievements</a>
-<a href="cv.html">CV</a>
-</div>
+    <!-- NAVIGATION -->
 
-<h1>Talks & Academic Engagement</h1>
+    <div class="navbar">
 
-<div class="talk">
-<div class="title">Marine and Aquatic Research – Challenges, Adventure and Faunal Diversity</div>
-<div class="role">OikoEssence — Expert Invitation</div>
-<div class="location">Mumbai, India</div>
-<div class="year">2020</div>
-</div>
+        <a href="index.html">Home</a>
 
-<div class="talk">
-<div class="title">Career Opportunity Abroad</div>
-<div class="role">R. J. College Arts, Science and Commerce — Resource Person</div>
-<div class="location">Mumbai, India</div>
-<div class="year">2019</div>
-</div>
+        <a href="research.html">Research</a>
 
-<div class="talk">
-<div class="title">International Conference on Ecology, Ethology and Environment Management</div>
-<div class="role">B. N. Bandodkar College — Delegate</div>
-<div class="location">Mumbai, India</div>
-<div class="year">2019</div>
-</div>
+        <a href="publications.html">Publications</a>
 
-<div class="talk">
-<div class="title">Statistical Techniques in Ecology</div>
-<div class="role">M.D. College of Arts, Science and Commerce — Resource Person</div>
-<div class="location">Mumbai, India</div>
-<div class="year">2019</div>
-</div>
+        <a href="talks.html">Talks</a>
 
-<div class="talk">
-<div class="title">Biological Diversity</div>
-<div class="role">Chang'an University — Professor Assistantship</div>
-<div class="location">Xi'an, China</div>
-<div class="year">2019</div>
-</div>
+        <a href="news.html">News & Events</a>
 
-<div class="talk">
-<div class="title">Avenues and Scholarships for Higher Education in Zoology</div>
-<div class="role">D. G. Ruparel College — Resource Person</div>
-<div class="location">Mumbai, India</div>
-<div class="year">2019</div>
-</div>
+        <a href="achievements.html">Achievements</a>
 
-<div class="talk">
-<div class="title">Zoology Alumni Achiever's Talk</div>
-<div class="role">Sathaye College — Invitee and Alumni Speaker</div>
-<div class="location">Mumbai, India</div>
-<div class="year">2019</div>
-</div>
+        <a href="cv.html">CV</a>
 
-<div class="talk">
-<div class="title">Wetland Research</div>
-<div class="role">M.D. College of Arts, Science and Commerce — Resource Person</div>
-<div class="location">Mumbai, India</div>
-<div class="year">2019</div>
-</div>
+        <a href="life.html">Life Beyond Research</a>
 
-<div class="talk">
-<div class="title">Marine Biodiversity & Ecology</div>
-<div class="role">Chang'an University — Professor Assistantship</div>
-<div class="location">Xi'an, China</div>
-<div class="year">2018</div>
-</div>
+    </div>
 
-<div class="footer">
-© Amit Patil
-</div>
+
+    <!-- PAGE INTRODUCTION -->
+
+    <h1>Talks & Academic Engagement</h1>
+
+    <p class="intro">
+        A selection of invited talks, academic presentations, resource-person
+        engagements, and other scholarly activities across different stages of
+        my academic journey.
+    </p>
+
+
+    <!-- =========================
+         2026
+    ========================== -->
+
+    <h2 class="section-title">2026</h2>
+
+
+    <div class="talk featured">
+
+        <div class="tag">
+            Invited Talk
+        </div>
+
+        <div class="talk-title">
+            My Days at Chang'an
+        </div>
+
+        <div class="role">
+            International School, Chang'an University
+        </div>
+
+        <div class="location">
+            Xi'an, China
+        </div>
+
+        <div class="year">
+            2026
+        </div>
+
+    </div>
+
+
+    <div class="talk featured">
+
+        <div class="tag">
+            Research Talk
+        </div>
+
+        <div class="talk-title">
+            Research Journey — Past and Present
+        </div>
+
+        <div class="role">
+            Institute of Urban Environment, Chinese Academy of Sciences
+        </div>
+
+        <div class="location">
+            Xiamen, China
+        </div>
+
+        <div class="year">
+            2026
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         2020
+    ========================== -->
+
+    <h2 class="section-title">2020</h2>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Marine and Aquatic Research – Challenges, Adventure and Faunal Diversity
+        </div>
+
+        <div class="role">
+            OikoEssence — Expert Invitation
+        </div>
+
+        <div class="location">
+            Mumbai, India
+        </div>
+
+        <div class="year">
+            2020
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         2019
+    ========================== -->
+
+    <h2 class="section-title">2019</h2>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Career Opportunity Abroad
+        </div>
+
+        <div class="role">
+            R. J. College Arts, Science and Commerce — Resource Person
+        </div>
+
+        <div class="location">
+            Mumbai, India
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            International Conference on Ecology, Ethology and Environment Management
+        </div>
+
+        <div class="role">
+            B. N. Bandodkar College — Delegate
+        </div>
+
+        <div class="location">
+            Mumbai, India
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Statistical Techniques in Ecology
+        </div>
+
+        <div class="role">
+            M.D. College of Arts, Science and Commerce — Resource Person
+        </div>
+
+        <div class="location">
+            Mumbai, India
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Biological Diversity
+        </div>
+
+        <div class="role">
+            Chang'an University — Professor Assistantship
+        </div>
+
+        <div class="location">
+            Xi'an, China
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Avenues and Scholarships for Higher Education in Zoology
+        </div>
+
+        <div class="role">
+            D. G. Ruparel College — Resource Person
+        </div>
+
+        <div class="location">
+            Mumbai, India
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Zoology Alumni Achiever's Talk
+        </div>
+
+        <div class="role">
+            Sathaye College — Invitee and Alumni Speaker
+        </div>
+
+        <div class="location">
+            Mumbai, India
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Wetland Research
+        </div>
+
+        <div class="role">
+            M.D. College of Arts, Science and Commerce — Resource Person
+        </div>
+
+        <div class="location">
+            Mumbai, India
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         2018
+    ========================== -->
+
+    <h2 class="section-title">2018</h2>
+
+
+    <div class="talk">
+
+        <div class="talk-title">
+            Marine Biodiversity & Ecology
+        </div>
+
+        <div class="role">
+            Chang'an University — Professor Assistantship
+        </div>
+
+        <div class="location">
+            Xi'an, China
+        </div>
+
+        <div class="year">
+            2018
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © Amit Patil | Built with GitHub Pages
+
+    </div>
 
 </div>
+```
 
 </body>
 
