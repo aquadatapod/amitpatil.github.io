@@ -1,140 +1,404 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
 
-<title>CV | Amit Patil</title>
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Amit Patil | Curriculum Vitae</title>
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-body{
-font-family:Arial, sans-serif;
-margin:0;
-background:#f4f6f7;
-}
+    body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f7;
+        color: #333;
+        line-height: 1.6;
+    }
 
-/* SIDEBAR */
+    /* =========================
+       SIDEBAR
+    ========================== */
 
-.sidebar{
-position:fixed;
-left:0;
-top:0;
-width:260px;
-height:100%;
-background:white;
-padding:30px 20px;
-box-shadow:2px 0 8px rgba(0,0,0,0.08);
-text-align:center;
-}
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        background: white;
+        padding: 30px 20px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-.sidebar img{
-width:180px;
-border-radius:6px;
-margin-bottom:15px;
-}
+    .sidebar img {
+        width: 180px;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
 
-.sidebar p{
-font-size:14px;
-color:#555;
-}
+    .sidebar h2 {
+        margin: 5px 0;
+        color: #2c3e50;
+        font-size: 24px;
+    }
 
-.links{
-margin-top:20px;
-text-align:left;
-}
+    .sidebar p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
 
-.links a{
-display:block;
-text-decoration:none;
-color:#2c3e50;
-padding:8px 0;
-}
+    .links {
+        margin-top: 22px;
+        text-align: left;
+    }
 
-.links a:hover{
-color:#1abc9c;
-}
+    .links a {
+        display: block;
+        text-decoration: none;
+        color: #2c3e50;
+        padding: 8px 0;
+        font-size: 15px;
+        transition: color 0.2s ease;
+    }
 
-/* MAIN */
+    .links a i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
 
-.main{
-margin-left:280px;
-padding:40px;
-}
+    .links a:hover {
+        color: #1abc9c;
+    }
 
-/* NAVBAR */
+    /* =========================
+       MAIN CONTENT
+    ========================== */
 
-.navbar{
-background:#2c3e50;
-padding:15px;
-margin-bottom:20px;
-}
+    .main {
+        margin-left: 280px;
+        padding: 40px;
+        max-width: 1000px;
+    }
 
-.navbar a{
-color:white;
-text-decoration:none;
-margin-right:25px;
-font-weight:bold;
-}
+    /* =========================
+       NAVIGATION
+    ========================== */
 
-.navbar a:hover{
-color:#1abc9c;
-}
+    .navbar {
+        background: #2c3e50;
+        padding: 15px 18px;
+        margin-bottom: 35px;
+        border-radius: 4px;
+    }
 
-/* PDF VIEWER */
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-right: 22px;
+        font-weight: 500;
+        font-size: 14.5px;
+        transition: color 0.2s ease;
+    }
 
-.cvframe{
-width:100%;
-height:900px;
-border:none;
-box-shadow:0 0 8px rgba(0,0,0,0.2);
-}
+    .navbar a:hover {
+        color: #1abc9c;
+    }
+
+    /* =========================
+       PAGE HEADING
+    ========================== */
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #2c3e50;
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 16px;
+        margin-bottom: 22px;
+        color: #555;
+    }
+
+    /* =========================
+       CV ACTIONS
+    ========================== */
+
+    .cv-actions {
+        margin-bottom: 18px;
+    }
+
+    .cv-button {
+        display: inline-block;
+        padding: 9px 16px;
+        margin-right: 8px;
+        background: #1a5276;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: background 0.2s ease;
+    }
+
+    .cv-button:hover {
+        background: #1abc9c;
+    }
+
+    .cv-button i {
+        margin-right: 7px;
+    }
+
+    /* =========================
+       PDF VIEWER
+    ========================== */
+
+    .cv-container {
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .cvframe {
+        display: block;
+        width: 100%;
+        height: 1000px;
+        border: none;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer {
+        margin-top: 60px;
+        padding: 20px;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+        border-top: 1px solid #eef2f5;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+        .sidebar {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 25px 20px;
+        }
+
+        .sidebar img {
+            width: 150px;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .main {
+            margin-left: 0;
+            padding: 25px 20px;
+            max-width: none;
+        }
+
+        .navbar {
+            line-height: 2;
+        }
+
+        .navbar a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .cvframe {
+            height: 850px;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .cvframe {
+            height: 700px;
+        }
+
+    }
 
 </style>
+```
 
 </head>
 
 <body>
 
+```
+<!-- =========================
+     SIDEBAR
+========================== -->
+
 <div class="sidebar">
 
-<img src="profile.png">
+    <img src="profile.png" alt="Amit Patil">
 
-<h2>Amit Patil</h2>
+    <h2>Amit Patil</h2>
 
-<p>
-Postdoctoral Researcher<br>
-Institute of Urban Environment<br>
-Chinese Academy of Sciences
-</p>
+    <p>
+        Postdoctoral Researcher<br>
+        Institute of Urban Environment<br>
+        Chinese Academy of Sciences
+    </p>
 
-<div class="links">
+    <div class="links">
 
-<a href="mailto:amit@iue.ac.cn">Email</a>
-<a href="https://orcid.org/0000-0001-8958-3895">ORCID</a>
-<a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en">Google Scholar</a>
-<a href="https://github.com/aquadatapod">GitHub</a>
+        <a href="mailto:amit@iue.ac.cn">
+            <i class="fas fa-envelope"></i>Email
+        </a>
+
+        <a href="https://www.researchgate.net/profile/Amit-Patil-13"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fab fa-researchgate"></i>ResearchGate
+        </a>
+
+        <a href="https://orcid.org/0000-0001-8958-3895"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fab fa-orcid"></i>ORCID
+        </a>
+
+        <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fas fa-graduation-cap"></i>Google Scholar
+        </a>
+
+        <a href="https://github.com/aquadatapod"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fab fa-github"></i>GitHub
+        </a>
+
+    </div>
 
 </div>
 
-</div>
+
+<!-- =========================
+     MAIN CONTENT
+========================== -->
 
 <div class="main">
 
-<div class="navbar">
-<a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
-<a href="talks.html">Talks</a>
-<a href="achievements.html">Achievements</a>
-<a href="cv.html">CV</a>
+    <!-- NAVIGATION -->
+
+    <div class="navbar">
+
+        <a href="index.html">Home</a>
+
+        <a href="research.html">Research</a>
+
+        <a href="publications.html">Publications</a>
+
+        <a href="talks.html">Talks</a>
+
+        <a href="news.html">News & Events</a>
+
+        <a href="achievements.html">Achievements</a>
+
+        <a href="cv.html">CV</a>
+
+        <a href="life.html">Life Beyond Research</a>
+
+    </div>
+
+
+    <!-- PAGE -->
+
+    <h1>Curriculum Vitae</h1>
+
+    <p class="intro">
+        My current curriculum vitae, including research experience,
+        education, publications, academic activities, awards, and other
+        professional experience.
+    </p>
+
+
+    <!-- CV ACTIONS -->
+
+    <div class="cv-actions">
+
+        <a href="cv.pdf"
+           target="_blank"
+           class="cv-button">
+
+            <i class="fas fa-file-pdf"></i>
+            Open CV
+
+        </a>
+
+        <a href="cv.pdf"
+           download
+           class="cv-button">
+
+            <i class="fas fa-download"></i>
+            Download CV
+
+        </a>
+
+    </div>
+
+
+    <!-- PDF -->
+
+    <div class="cv-container">
+
+        <iframe
+            src="cv.pdf"
+            class="cvframe"
+            title="Amit Patil Curriculum Vitae">
+        </iframe>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © Amit Patil | Built with GitHub Pages
+
+    </div>
+
 </div>
-
-<h1>Curriculum Vitae</h1>
-
-<iframe src="cv.pdf" class="cvframe"></iframe>
-
-</div>
+```
 
 </body>
 
