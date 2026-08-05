@@ -1,354 +1,513 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Amit Patil | News & Events</title>
+<title>Amit Patil | News & Events</title>
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
+<style>
 
-        body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            background: #f4f6f7;
-            color: #333;
-            line-height: 1.6;
-        }
+    body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f7;
+        color: #333;
+        line-height: 1.6;
+    }
 
-        /* SIDEBAR */
+    /* =========================
+       SIDEBAR
+    ========================== */
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        background: white;
+        padding: 30px 20px;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .sidebar img {
+        width: 180px;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar h2 {
+        margin: 5px 0;
+        color: #2c3e50;
+    }
+
+    .sidebar p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .links {
+        margin-top: 22px;
+        text-align: left;
+    }
+
+    .links a {
+        display: block;
+        text-decoration: none;
+        color: #2c3e50;
+        padding: 8px 0;
+        font-size: 15px;
+    }
+
+    .links a i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
+
+    .links a:hover {
+        color: #1abc9c;
+    }
+
+    /* =========================
+       MAIN
+    ========================== */
+
+    .main {
+        margin-left: 280px;
+        padding: 40px;
+        max-width: 1000px;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .navbar {
+        background: #2c3e50;
+        padding: 15px 18px;
+        margin-bottom: 35px;
+        border-radius: 4px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-right: 22px;
+        font-weight: 500;
+        font-size: 14.5px;
+    }
+
+    .navbar a:hover {
+        color: #1abc9c;
+    }
+
+    /* =========================
+       HEADINGS
+    ========================== */
+
+    h1 {
+        margin-top: 0;
+        color: #2c3e50;
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .section-title {
+        margin-top: 45px;
+        margin-bottom: 25px;
+        color: #1a5276;
+        font-size: 23px;
+        border-bottom: 2px solid #eef2f5;
+        padding-bottom: 8px;
+    }
+
+    /* =========================
+       NEWS ITEM
+    ========================== */
+
+    .news-item {
+        background: white;
+        padding: 22px;
+        margin-bottom: 22px;
+        border-left: 4px solid #1abc9c;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+
+    .news-content {
+        display: grid;
+        grid-template-columns: 1fr 330px;
+        gap: 28px;
+        align-items: center;
+    }
+
+    .news-date {
+        font-size: 13px;
+        color: #1a5276;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .news-type {
+        display: inline-block;
+        font-size: 12px;
+        background: #eef2f5;
+        color: #555;
+        padding: 3px 8px;
+        border-radius: 12px;
+        margin-bottom: 8px;
+    }
+
+    .news-item h3 {
+        margin: 4px 0 10px 0;
+        color: #2c3e50;
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .news-item p {
+        margin: 0;
+        font-size: 14.5px;
+        color: #555;
+    }
+
+    .news-highlight {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    /* =========================
+       NEWS IMAGES
+    ========================== */
+
+    .news-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .news-images img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer {
+        margin-top: 60px;
+        padding: 20px;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+        border-top: 1px solid #eef2f5;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
 
         .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 260px;
-            height: 100%;
-            background: white;
-            padding: 30px 20px;
-            box-shadow: 2px 0 8px rgba(0,0,0,0.08);
-            text-align: center;
-            box-sizing: border-box;
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 25px 20px;
         }
 
         .sidebar img {
-            width: 180px;
-            height: auto;
-            border-radius: 6px;
-            margin-bottom: 15px;
-        }
-
-        .sidebar h2 {
-            margin: 5px 0;
-            color: #2c3e50;
-        }
-
-        .sidebar p {
-            font-size: 14px;
-            color: #666;
+            width: 150px;
         }
 
         .links {
-            margin-top: 22px;
-            text-align: left;
+            text-align: center;
         }
 
         .links a {
-            display: block;
-            text-decoration: none;
-            color: #2c3e50;
-            padding: 8px 0;
-            font-size: 15px;
+            display: inline-block;
+            margin: 0 8px;
         }
-
-        .links a i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .links a:hover {
-            color: #1abc9c;
-        }
-
-        /* MAIN */
 
         .main {
-            margin-left: 280px;
-            padding: 40px;
-            max-width: 1000px;
+            margin-left: 0;
+            padding: 25px 20px;
+            max-width: none;
         }
 
-        /* NAVIGATION */
-
         .navbar {
-            background: #2c3e50;
-            padding: 15px 18px;
-            margin-bottom: 35px;
-            border-radius: 4px;
+            line-height: 2;
         }
 
         .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-right: 22px;
-            font-weight: 500;
-            font-size: 14.5px;
-        }
-
-        .navbar a:hover {
-            color: #1abc9c;
-        }
-
-        /* HEADINGS */
-
-        h1 {
-            margin-top: 0;
-            color: #2c3e50;
-            font-size: 32px;
-        }
-
-        .intro {
-            font-size: 16px;
-            margin-bottom: 35px;
-        }
-
-        .section-title {
-            margin-top: 45px;
-            margin-bottom: 25px;
-            color: #1a5276;
-            font-size: 23px;
-            border-bottom: 2px solid #eef2f5;
-            padding-bottom: 8px;
-        }
-
-        /* NEWS */
-
-        .news-item {
-            background: white;
-            padding: 20px 23px;
-            margin-bottom: 16px;
-            border-left: 4px solid #1abc9c;
-            border-radius: 5px;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-        }
-
-        .news-date {
-            font-size: 13px;
-            color: #1a5276;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .news-type {
             display: inline-block;
-            font-size: 12px;
-            background: #eef2f5;
-            color: #555;
-            padding: 3px 8px;
-            border-radius: 12px;
-            margin-bottom: 8px;
+            margin-right: 15px;
         }
 
-        .news-item h3 {
-            margin: 4px 0 8px 0;
-            color: #2c3e50;
-            font-size: 18px;
+        .news-content {
+            grid-template-columns: 1fr;
         }
 
-        .news-item p {
-            margin: 0;
-            font-size: 14.5px;
-            color: #555;
+        .news-images {
+            grid-template-columns: 1fr 1fr;
         }
 
-        /* FOOTER */
-
-        .footer {
-            margin-top: 60px;
-            padding: 20px;
-            text-align: center;
-            color: #777;
-            font-size: 14px;
-            border-top: 1px solid #eef2f5;
+        .news-images img {
+            height: 200px;
         }
 
-        /* MOBILE */
+    }
 
-        @media (max-width: 900px) {
+    @media (max-width: 600px) {
 
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-                padding: 25px 20px;
-            }
-
-            .sidebar img {
-                width: 150px;
-            }
-
-            .links {
-                text-align: center;
-            }
-
-            .links a {
-                display: inline-block;
-                margin: 0 8px;
-            }
-
-            .main {
-                margin-left: 0;
-                padding: 25px 20px;
-                max-width: none;
-            }
-
-            .navbar {
-                line-height: 2;
-            }
-
-            .navbar a {
-                display: inline-block;
-                margin-right: 15px;
-            }
+        .news-images {
+            grid-template-columns: 1fr;
         }
 
-    </style>
+        .news-images img {
+            height: auto;
+        }
+
+    }
+
+</style>
+```
 
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+```
+<!-- SIDEBAR -->
 
-    <div class="sidebar">
+<div class="sidebar">
 
-        <img src="profile.png" alt="Amit Patil">
+    <img src="profile.png" alt="Amit Patil">
 
-        <h2>Amit Patil</h2>
+    <h2>Amit Patil</h2>
 
-        <p>
-            Postdoctoral Researcher<br>
-            Institute of Urban Environment<br>
-            Chinese Academy of Sciences
-        </p>
+    <p>
+        Postdoctoral Researcher<br>
+        Institute of Urban Environment<br>
+        Chinese Academy of Sciences
+    </p>
 
-        <div class="links">
+    <div class="links">
 
-            <a href="mailto:amit@iue.ac.cn">
-                <i class="fas fa-envelope"></i>Email
-            </a>
+        <a href="mailto:amit@iue.ac.cn">
+            <i class="fas fa-envelope"></i>Email
+        </a>
 
-            <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank">
-                <i class="fab fa-researchgate"></i>ResearchGate
-            </a>
+        <a href="https://www.researchgate.net/profile/Amit-Patil-13"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fab fa-researchgate"></i>ResearchGate
+        </a>
 
-            <a href="https://orcid.org/0000-0001-8958-3895" target="_blank">
-                <i class="fab fa-orcid"></i>ORCID
-            </a>
+        <a href="https://orcid.org/0000-0001-8958-3895"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fab fa-orcid"></i>ORCID
+        </a>
 
-            <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en" target="_blank">
-                <i class="fas fa-graduation-cap"></i>Google Scholar
-            </a>
+        <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fas fa-graduation-cap"></i>Google Scholar
+        </a>
 
-            <a href="https://github.com/aquadatapod" target="_blank">
-                <i class="fab fa-github"></i>GitHub
-            </a>
+        <a href="https://github.com/aquadatapod"
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fab fa-github"></i>GitHub
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="main">
+
+    <div class="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="talks.html">Talks</a>
+        <a href="news.html">News & Events</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="cv.html">CV</a>
+        <a href="life.html">Life Beyond Research</a>
+
+    </div>
+
+
+    <h1>News & Events</h1>
+
+    <p class="intro">
+        A collection of research updates, academic events, professional milestones,
+        and other meaningful moments from my journey as a researcher.
+    </p>
+
+
+    <!-- =========================
+         2026
+    ========================== -->
+
+    <h2 class="section-title">2026</h2>
+
+
+    <div class="news-item">
+
+        <div class="news-content">
+
+            <div>
+
+                <div class="news-date">
+                    APRIL 2026 · XI'AN, CHINA
+                </div>
+
+                <div class="news-type">
+                    Alumni & Academic Engagement
+                </div>
+
+                <h3>
+                    Returning to Chang’an: From Student Life to Scientific Research
+                </h3>
+
+                <p>
+                    I was invited as an
+                    <span class="news-highlight">Outstanding International Alumni</span>
+                    to return to Chang’an University for its 75th anniversary and the
+                    70th anniversary of international education in China. I shared my
+                    journey from studying at Chang’an University to my current work as
+                    a Postdoctoral Researcher at the Chinese Academy of Sciences,
+                    reflecting on my academic development and research journey.
+                </p>
+
+                <p style="margin-top:12px;">
+                    I also took part in the establishment of the
+                    <span class="news-highlight">
+                    Chang’an University International Students Alumni Association in India
+                    </span>
+                    as its inaugural president.
+                </p>
+
+            </div>
+
+
+            <div class="news-images">
+
+                <img src="changan_alumni_2026_1.jpg"
+                     alt="Amit Patil at Chang'an University alumni event">
+
+                <img src="changan_alumni_2026_2.jpg"
+                     alt="Chang'an University international alumni event">
+
+            </div>
 
         </div>
 
     </div>
 
 
-    <!-- MAIN -->
+    <!-- =========================
+         2025
+    ========================== -->
 
-    <div class="main">
-
-        <div class="navbar">
-
-            <a href="index.html">Home</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="talks.html">Talks</a>
-            <a href="news.html">News & Events</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="cv.html">CV</a>
-            <a href="life.html">Life Beyond Research</a>
-
-        </div>
+    <h2 class="section-title">2025</h2>
 
 
-        <h1>News & Events</h1>
+    <div class="news-item">
 
-        <p class="intro">
-            A collection of research updates, academic events, professional milestones,
-            field experiences, and other moments from my journey as a researcher.
-        </p>
+        <div class="news-content">
 
+            <div>
 
-        <!-- 2026 -->
+                <div class="news-date">
+                    OCTOBER 2025 · XIAMEN, CHINA
+                </div>
 
-        <h2 class="section-title">2026</h2>
+                <div class="news-type">
+                    Innovation & International Collaboration
+                </div>
 
+                <h3>
+                    Second Prize at the 3rd “Su Song Cup” BRICS Track
+                </h3>
 
-        <div class="news-item">
+                <p>
+                    I was awarded
+                    <span class="news-highlight">
+                    Second Prize in the BRICS Track Final
+                    </span>
+                    of the 3rd “Su Song Cup” Future Industry Innovation Competition.
+                    Together with Dr. Si-Cheng Ao and the Cuineng Tech team, I contributed
+                    to the project
+                    <span class="news-highlight">
+                    “Comprehensive Solution for Self-purification of Urban Water Body”
+                    </span>,
+                    which received the Pioneer Award.
+                </p>
 
-            <div class="news-date">
-                AUGUST 2026
+                <p style="margin-top:12px;">
+                    The competition provided an opportunity to connect
+                    <span class="news-highlight">
+                    ecological research, environmental innovation, and international collaboration
+                    </span>
+                    beyond academia.
+                </p>
+
             </div>
 
-            <div class="news-type">
-                Research
+
+            <div class="news-images">
+
+                <img src="susong_brics_2025_1.jpg"
+                     alt="Amit Patil at the Su Song Cup BRICS competition">
+
+                <img src="susong_brics_2025_2.jpg"
+                     alt="Su Song Cup BRICS Track award ceremony">
+
             </div>
 
-            <h3>Research updates and new projects</h3>
-
-            <p>
-                Updates on ongoing research projects, collaborations, and developments
-                in ecological research.
-            </p>
-
-        </div>
-
-
-        <!-- ADD FUTURE NEWS ABOVE THIS LINE -->
-
-
-        <!-- 2025 -->
-
-        <h2 class="section-title">2025</h2>
-
-
-        <div class="news-item">
-
-            <div class="news-date">
-                2025
-            </div>
-
-            <div class="news-type">
-                Academic
-            </div>
-
-            <h3>Research, collaborations and academic activities</h3>
-
-            <p>
-                A selection of research activities, collaborations, presentations,
-                and professional experiences from 2025.
-            </p>
-
-        </div>
-
-
-        <div class="footer">
-            © Amit Patil | Built with GitHub Pages
         </div>
 
     </div>
+
+
+    <!-- ADD FUTURE NEWS ABOVE THIS LINE -->
+
+
+    <div class="footer">
+        © Amit Patil | Built with GitHub Pages
+    </div>
+
+</div>
+```
 
 </body>
 
