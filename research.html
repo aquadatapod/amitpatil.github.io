@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amit Patil | Research</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100%;
+            background: white;
+            padding: 30px 20px;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .sidebar img {
+            width: 180px;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h2 {
+            margin: 5px 0;
+            color: #2c3e50;
+            font-size: 24px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .links {
+            margin-top: 22px;
+            text-align: left;
+        }
+
+        .links a {
+            display: block;
+            text-decoration: none;
+            color: #2c3e50;
+            padding: 8px 0;
+            font-size: 15px;
+            transition: color 0.2s ease;
+        }
+
+        .links a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .links a:hover {
+            color: #1abc9c;
+        }
+
+        /* MAIN */
+
+        .main {
+            margin-left: 280px;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 18px;
+            margin-bottom: 35px;
+            border-radius: 4px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 22px;
+            font-weight: 500;
+            font-size: 14.5px;
+        }
+
+        .navbar a:hover {
+            color: #1abc9c;
+        }
+
+        /* HEADINGS */
+
+        h1 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 32px;
+        }
+
+        .section-title {
+            margin-top: 45px;
+            margin-bottom: 20px;
+            color: #1a5276;
+            font-size: 23px;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 8px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* INTRO */
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        /* RESEARCH THEMES */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .research-card {
+            background: white;
+            padding: 22px;
+            border-radius: 7px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+            border-top: 3px solid #1a5276;
+        }
+
+        .research-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .research-card h3 i {
+            color: #1abc9c;
+            margin-right: 9px;
+        }
+
+        .research-card p {
+            font-size: 14.5px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* PROJECTS */
+
+        .project {
+            background: white;
+            padding: 22px 24px;
+            margin-bottom: 16px;
+            border-left: 4px solid #1abc9c;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+        }
+
+        .project h3 {
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .project p {
+            margin: 0;
+            font-size: 14.5px;
+            color: #555;
+        }
+
+        /* APPROACH */
+
+        .approach-list {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+        }
+
+        .approach-list ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .approach-list li {
+            margin-bottom: 8px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            border-top: 1px solid #eef2f5;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 25px 20px;
+            }
+
+            .sidebar img {
+                width: 150px;
+            }
+
+            .links {
+                text-align: center;
+            }
+
+            .links a {
+                display: inline-block;
+                margin: 0 8px;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 25px 20px;
+                max-width: none;
+            }
+
+            .navbar {
+                line-height: 2;
+            }
+
+            .navbar a {
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <img src="profile.png" alt="Amit Patil">
+
+        <h2>Amit Patil</h2>
+
+        <p>
+            Postdoctoral Researcher<br>
+            Institute of Urban Environment<br>
+            Chinese Academy of Sciences
+        </p>
+
+        <div class="links">
+
+            <a href="mailto:amit@iue.ac.cn">
+                <i class="fas fa-envelope"></i>Email
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank">
+                <i class="fab fa-researchgate"></i>ResearchGate
+            </a>
+
+            <a href="https://orcid.org/0000-0001-8958-3895" target="_blank">
+                <i class="fab fa-orcid"></i>ORCID
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en" target="_blank">
+                <i class="fas fa-graduation-cap"></i>Google Scholar
+            </a>
+
+            <a href="https://github.com/aquadatapod" target="_blank">
+                <i class="fab fa-github"></i>GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <div class="navbar">
+
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="talks.html">Talks</a>
+            <a href="news.html">News & Events</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="cv.html">CV</a>
+            <a href="life.html">Life Beyond Research</a>
+
+        </div>
+
+
+        <h1>Research</h1>
+
+        <p class="intro">
+            My research focuses on understanding how environmental change, human pressures,
+            and ecological processes influence biodiversity and ecosystem functioning.
+            I combine field ecology, ecological synthesis, species traits, and quantitative
+            modelling to investigate ecological patterns across taxa, ecosystems, and spatial scales.
+        </p>
+
+
+        <!-- RESEARCH THEMES -->
+
+        <h2 class="section-title">Research Themes</h2>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+
+                <h3>
+                    <i class="fas fa-leaf"></i>
+                    Macroecology & Biodiversity
+                </h3>
+
+                <p>
+                    Investigating broad-scale patterns in biodiversity, species traits,
+                    ecological interactions, and environmental responses across taxa and regions.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    <i class="fas fa-water"></i>
+                    Aquatic & River Ecology
+                </h3>
+
+                <p>
+                    Studying aquatic communities and ecosystem processes across rivers,
+                    coastal systems, and other aquatic environments.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    <i class="fas fa-flask"></i>
+                    Pollution Ecology
+                </h3>
+
+                <p>
+                    Examining how microplastics, heavy metals, pesticides, and other
+                    emerging contaminants interact with organisms and ecological systems.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    <i class="fas fa-chart-line"></i>
+                    Ecological Data Science
+                </h3>
+
+                <p>
+                    Applying ecological modelling, statistical synthesis, functional traits,
+                    and large datasets to address questions in environmental biology.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CURRENT RESEARCH -->
+
+        <h2 class="section-title">Current Research</h2>
+
+
+        <div class="project">
+
+            <h3>Microplastics & Wildlife</h3>
+
+            <p>
+                Investigating patterns of microplastic exposure and accumulation across
+                wildlife, with particular emphasis on species traits, trophic ecology,
+                body size, and environmental context.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Pollution & Aquatic Organisms</h3>
+
+            <p>
+                Exploring the ecological consequences of contaminants such as microplastics
+                and heavy metals in aquatic organisms and coastal ecosystems.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Riverine Biodiversity & Ecosystem Functioning</h3>
+
+            <p>
+                Investigating how river geomorphology, environmental gradients, and
+                mesohabitat structure influence macroinvertebrate communities and
+                ecological functioning.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Global Ecological Synthesis</h3>
+
+            <p>
+                Integrating published datasets, species traits, ecological observations,
+                and quantitative approaches to identify general ecological patterns
+                across taxa and ecosystems.
+            </p>
+
+        </div>
+
+
+        <!-- RESEARCH APPROACH -->
+
+        <h2 class="section-title">Research Approach</h2>
+
+        <div class="approach-list">
+
+            <ul>
+
+                <li>Field-based ecological observation and sampling</li>
+
+                <li>Large-scale ecological data synthesis</li>
+
+                <li>Functional trait and community ecology</li>
+
+                <li>Statistical and hierarchical modelling</li>
+
+                <li>Structural equation modelling</li>
+
+                <li>Phylogenetic and comparative approaches</li>
+
+                <li>Data visualization and reproducible ecological analysis</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- PHD -->
+
+        <h2 class="section-title">Doctoral Research</h2>
+
+        <p>
+            My PhD research investigated the ecological functioning of riverine
+            macroinvertebrate communities across different mesohabitats in the
+            Wei River Basin, Shaanxi Province, Northwest China.
+        </p>
+
+
+        <div class="footer">
+            © Amit Patil | Built with GitHub Pages
+        </div>
+
+    </div>
+
+</body>
+
+</html>
