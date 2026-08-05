@@ -1,296 +1,708 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
 
-<title>Achievements | Amit Patil</title>
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Amit Patil | Achievements</title>
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f6f7;
-}
+    body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f7;
+        color: #333;
+        line-height: 1.6;
+    }
 
-/* SIDEBAR */
+    /* =========================
+       SIDEBAR
+    ========================== */
 
-.sidebar{
-position:fixed;
-left:0;
-top:0;
-width:260px;
-height:100%;
-background:white;
-padding:30px 20px;
-box-shadow:2px 0 8px rgba(0,0,0,0.08);
-text-align:center;
-}
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        background: white;
+        padding: 30px 20px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        box-sizing: border-box;
+    }
 
-.sidebar img{
-width:180px;
-height:auto;
-border-radius:6px;
-margin-bottom:15px;
-}
+    .sidebar img {
+        width: 180px;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
 
-.sidebar h2{
-margin:10px 0 5px 0;
-}
+    .sidebar h2 {
+        margin: 5px 0;
+        color: #2c3e50;
+        font-size: 24px;
+    }
 
-.sidebar p{
-font-size:14px;
-color:#555;
-}
+    .sidebar p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+    }
 
-.links{
-margin-top:20px;
-text-align:left;
-}
+    .links {
+        margin-top: 22px;
+        text-align: left;
+    }
 
-.links a{
-display:block;
-text-decoration:none;
-color:#2c3e50;
-padding:8px 0;
-}
+    .links a {
+        display: block;
+        text-decoration: none;
+        color: #2c3e50;
+        padding: 8px 0;
+        font-size: 15px;
+        transition: color 0.2s ease;
+    }
 
-.links a i{
-margin-right:10px;
-}
+    .links a i {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
 
-.links a:hover{
-color:#1abc9c;
-}
+    .links a:hover {
+        color: #1abc9c;
+    }
 
-/* MAIN CONTENT */
+    /* =========================
+       MAIN CONTENT
+    ========================== */
 
-.main{
-margin-left:280px;
-padding:40px;
-}
+    .main {
+        margin-left: 280px;
+        padding: 40px;
+        max-width: 1000px;
+    }
 
-/* NAVBAR */
+    /* =========================
+       NAVIGATION
+    ========================== */
 
-.navbar{
-background:#2c3e50;
-padding:15px;
-margin-bottom:30px;
-}
+    .navbar {
+        background: #2c3e50;
+        padding: 15px 18px;
+        margin-bottom: 35px;
+        border-radius: 4px;
+    }
 
-.navbar a{
-color:white;
-text-decoration:none;
-margin-right:25px;
-font-weight:bold;
-}
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-right: 22px;
+        font-weight: 500;
+        font-size: 14.5px;
+        transition: color 0.2s ease;
+    }
 
-.navbar a:hover{
-color:#1abc9c;
-}
+    .navbar a:hover {
+        color: #1abc9c;
+    }
 
-/* ACHIEVEMENTS */
+    /* =========================
+       PAGE HEADING
+    ========================== */
 
-.achievement{
-margin-bottom:30px;
-padding-bottom:15px;
-border-bottom:1px solid #ddd;
-}
+    h1 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #2c3e50;
+        font-size: 32px;
+    }
 
-.title{
-font-size:18px;
-font-weight:bold;
-color:#1a5276;
-}
+    .intro {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
 
-.org{
-margin-top:5px;
-}
+    /* =========================
+       SECTION TITLES
+    ========================== */
 
-.year{
-color:#1abc9c;
-font-weight:bold;
-margin-top:5px;
-}
+    .section-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: #1a5276;
+        font-size: 23px;
+        border-bottom: 2px solid #eef2f5;
+        padding-bottom: 8px;
+    }
 
-/* IMAGE STRIP */
+    /* =========================
+       ACHIEVEMENT CARDS
+    ========================== */
 
-.gallery{
-margin-top:40px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
+    .achievement {
+        background: white;
+        padding: 20px 23px;
+        margin-bottom: 16px;
+        border-left: 4px solid #1abc9c;
+        border-radius: 5px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
 
-.gallery img{
-width:220px;
-height:150px;
-object-fit:cover;
-border-radius:6px;
-box-shadow:0 3px 8px rgba(0,0,0,0.15);
-transition:transform 0.3s;
-}
+    .achievement-title {
+        color: #1a5276;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 1.45;
+        margin-bottom: 8px;
+    }
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+    .org {
+        font-size: 14.5px;
+        color: #444;
+        margin-bottom: 4px;
+    }
 
-/* FOOTER */
+    .org a {
+        color: #1a5276;
+        text-decoration: none;
+    }
 
-.footer{
-margin-top:50px;
-color:#777;
-font-size:14px;
-}
+    .org a:hover {
+        color: #1abc9c;
+        text-decoration: underline;
+    }
+
+    .location {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 4px;
+    }
+
+    .year {
+        font-size: 13px;
+        color: #1abc9c;
+        font-weight: bold;
+    }
+
+    /* =========================
+       FEATURED ACHIEVEMENT
+    ========================== */
+
+    .featured {
+        border-left: 4px solid #1a5276;
+    }
+
+    .featured .achievement-title {
+        font-size: 18px;
+    }
+
+    .tag {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 3px 9px;
+        background: #eef2f5;
+        color: #555;
+        border-radius: 12px;
+        font-size: 12px;
+    }
+
+    /* =========================
+       HIGHLIGHTS GALLERY
+    ========================== */
+
+    .gallery {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.02);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer {
+        margin-top: 60px;
+        padding: 20px;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+        border-top: 1px solid #eef2f5;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+        .sidebar {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 25px 20px;
+        }
+
+        .sidebar img {
+            width: 150px;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .main {
+            margin-left: 0;
+            padding: 25px 20px;
+            max-width: none;
+        }
+
+        .navbar {
+            line-height: 2;
+        }
+
+        .navbar a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .achievement {
+            padding: 18px;
+        }
+
+        .gallery img {
+            height: 220px;
+        }
+
+    }
 
 </style>
+```
 
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
+```
+<!-- =========================
+     SIDEBAR
+========================== -->
 
 <div class="sidebar">
 
-<img src="profile.png">
+    <img src="profile.png" alt="Amit Patil">
 
-<h2>Amit Patil</h2>
+    <h2>Amit Patil</h2>
 
-<p>
-Postdoctoral Researcher<br>
-Institute of Urban Environment<br>
-Chinese Academy of Sciences
-</p>
+    <p>
+        Postdoctoral Researcher<br>
+        Institute of Urban Environment<br>
+        Chinese Academy of Sciences
+    </p>
 
-<div class="links">
+    <div class="links">
 
-<a href="mailto:amit@iue.ac.cn">
-<i class="fas fa-envelope"></i> Email
-</a>
+        <a href="mailto:amit@iue.ac.cn">
+            <i class="fas fa-envelope"></i>Email
+        </a>
 
-<a href="https://orcid.org/0000-0001-8958-3895">
-<i class="fab fa-orcid"></i> ORCID
-</a>
+        <a href="https://www.researchgate.net/profile/Amit-Patil-13" target="_blank">
+            <i class="fab fa-researchgate"></i>ResearchGate
+        </a>
 
-<a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en">
-<i class="fas fa-graduation-cap"></i> Google Scholar
-</a>
+        <a href="https://orcid.org/0000-0001-8958-3895" target="_blank">
+            <i class="fab fa-orcid"></i>ORCID
+        </a>
 
-<a href="https://github.com/aquadatapod">
-<i class="fab fa-github"></i> GitHub
-</a>
+        <a href="https://scholar.google.com/citations?user=wu_CuqoAAAAJ&hl=en" target="_blank">
+            <i class="fas fa-graduation-cap"></i>Google Scholar
+        </a>
+
+        <a href="https://github.com/aquadatapod" target="_blank">
+            <i class="fab fa-github"></i>GitHub
+        </a>
+
+    </div>
 
 </div>
 
-</div>
 
-<!-- MAIN -->
+<!-- =========================
+     MAIN CONTENT
+========================== -->
 
 <div class="main">
 
-<div class="navbar">
-<a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
-<a href="talks.html">Talks</a>
-<a href="achievements.html">Achievements</a>
-<a href="cv.html">CV</a>
-</div>
+    <!-- NAVIGATION -->
 
-<h1>Achievements</h1>
+    <div class="navbar">
 
-<div class="achievement">
-<div class="title">Second Prize – SUSONG BRICS Track Final Competition (Future Information Category)</div>
-<div class="org">
-<a href="https://mp.weixin.qq.com/s/UT0N3FWfFZOLodv4ZmHhKw">SUSONG BRICS Track Organization Committee</a>
-</div>
-<div>China</div>
-<div class="year">2025</div>
-</div>
+        <a href="index.html">Home</a>
 
-<div class="achievement">
-<div class="title">Chinese Government Outstanding International Student</div>
-<div class="org">
-<a href="https://www.chinesescholarshipcouncil.com/">Chinese Scholarship Council (CSC)</a>
-</div>
-<div>China</div>
-<div class="year">2020</div>
-</div>
+        <a href="research.html">Research</a>
 
-<div class="achievement">
-<div class="title">Academic Star Award</div>
-<div class="org">
-<a href="https://ies.chd.edu.cn/en/">International Education School</a>,
-<a href="https://en.chd.edu.cn/">Chang'an University</a>
-</div>
-<div>Xi'an, China</div>
-<div class="year">2020</div>
-</div>
+        <a href="publications.html">Publications</a>
 
-<div class="achievement">
-<div class="title">Best Paper Presenter</div>
-<div class="org">The 2nd River Basin Ecology Forum</div>
-<div>Nanchang, Jiangxi, China</div>
-<div class="year">2019</div>
-</div>
+        <a href="talks.html">Talks</a>
 
-<div class="achievement">
-<div class="title">Excellent International Student</div>
-<div class="org">
-<a href="https://ies.chd.edu.cn/en/">International Education School</a>,
-<a href="https://en.chd.edu.cn/">Chang'an University</a>
-</div>
-<div>Xi'an, China</div>
-<div class="year">2019</div>
-</div>
+        <a href="news.html">News & Events</a>
 
-<div class="achievement">
-<div class="title">Academic Star Award</div>
-<div class="org">
-<a href="https://ies.chd.edu.cn/en/">International Education School</a>,
-<a href="https://en.chd.edu.cn/">Chang'an University</a>
-</div>
-<div>Xi'an, China</div>
-<div class="year">2019</div>
-</div>
+        <a href="achievements.html">Achievements</a>
 
-<div class="achievement">
-<div class="title">Excellent Ambassador</div>
-<div class="org">
-<a href="https://ies.chd.edu.cn/en/">International Education School</a>,
-<a href="https://en.chd.edu.cn/">Chang'an University</a>
-</div>
-<div>Xi'an, China</div>
-<div class="year">2018</div>
-</div>
+        <a href="cv.html">CV</a>
 
-<div class="achievement">
-<div class="title">MHRD (India) – CSC (China) Bilateral Scholarship Award</div>
-<div class="org">
-<a href="https://indiaai.gov.in/ministries/ministry-of-human-resource-development">MHRD India</a> &
-<a href="https://www.chinesescholarshipcouncil.com/">Chinese Scholarship Council</a>
+        <a href="life.html">Life Beyond Research</a>
+
+    </div>
+
+
+    <!-- PAGE INTRODUCTION -->
+
+    <h1>Achievements</h1>
+
+    <p class="intro">
+        Selected academic awards, scholarships, recognitions, and milestones
+        from my academic journey.
+    </p>
+
+
+    <!-- =========================
+         2025
+    ========================== -->
+
+    <h2 class="section-title">2025</h2>
+
+    <div class="achievement featured">
+
+        <div class="tag">
+            Competition Award
+        </div>
+
+        <div class="achievement-title">
+            Second Prize – SUSONG BRICS Track Final Competition
+            (Future Information Category)
+        </div>
+
+        <div class="org">
+            <a href="https://mp.weixin.qq.com/s/UT0N3FWfFZOLodv4ZmHhKw"
+               target="_blank"
+               rel="noopener noreferrer">
+                SUSONG BRICS Track Organization Committee
+            </a>
+        </div>
+
+        <div class="location">
+            China
+        </div>
+
+        <div class="year">
+            2025
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         2020
+    ========================== -->
+
+    <h2 class="section-title">2020</h2>
+
+    <div class="achievement">
+
+        <div class="achievement-title">
+            Chinese Government Outstanding International Student
+        </div>
+
+        <div class="org">
+            <a href="https://www.chinesescholarshipcouncil.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Chinese Scholarship Council (CSC)
+            </a>
+        </div>
+
+        <div class="location">
+            China
+        </div>
+
+        <div class="year">
+            2020
+        </div>
+
+    </div>
+
+
+    <div class="achievement">
+
+        <div class="achievement-title">
+            Academic Star Award
+        </div>
+
+        <div class="org">
+
+            <a href="https://ies.chd.edu.cn/en/"
+               target="_blank"
+               rel="noopener noreferrer">
+                International Education School
+            </a>,
+            <a href="https://en.chd.edu.cn/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Chang'an University
+            </a>
+
+        </div>
+
+        <div class="location">
+            Xi'an, China
+        </div>
+
+        <div class="year">
+            2020
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         2019
+    ========================== -->
+
+    <h2 class="section-title">2019</h2>
+
+    <div class="achievement">
+
+        <div class="achievement-title">
+            Best Paper Presenter
+        </div>
+
+        <div class="org">
+            The 2nd River Basin Ecology Forum
+        </div>
+
+        <div class="location">
+            Nanchang, Jiangxi, China
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="achievement">
+
+        <div class="achievement-title">
+            Excellent International Student
+        </div>
+
+        <div class="org">
+
+            <a href="https://ies.chd.edu.cn/en/"
+               target="_blank"
+               rel="noopener noreferrer">
+                International Education School
+            </a>,
+            <a href="https://en.chd.edu.cn/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Chang'an University
+            </a>
+
+        </div>
+
+        <div class="location">
+            Xi'an, China
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <div class="achievement">
+
+        <div class="achievement-title">
+            Academic Star Award
+        </div>
+
+        <div class="org">
+
+            <a href="https://ies.chd.edu.cn/en/"
+               target="_blank"
+               rel="noopener noreferrer">
+                International Education School
+            </a>,
+            <a href="https://en.chd.edu.cn/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Chang'an University
+            </a>
+
+        </div>
+
+        <div class="location">
+            Xi'an, China
+        </div>
+
+        <div class="year">
+            2019
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         2018
+    ========================== -->
+
+    <h2 class="section-title">2018</h2>
+
+    <div class="achievement">
+
+        <div class="achievement-title">
+            Excellent Ambassador
+        </div>
+
+        <div class="org">
+
+            <a href="https://ies.chd.edu.cn/en/"
+               target="_blank"
+               rel="noopener noreferrer">
+                International Education School
+            </a>,
+            <a href="https://en.chd.edu.cn/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Chang'an University
+            </a>
+
+        </div>
+
+        <div class="location">
+            Xi'an, China
+        </div>
+
+        <div class="year">
+            2018
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         2017
+    ========================== -->
+
+    <h2 class="section-title">2017</h2>
+
+    <div class="achievement">
+
+        <div class="achievement-title">
+            MHRD (India) – CSC (China) Bilateral Scholarship Award
+        </div>
+
+        <div class="org">
+
+            <a href="https://indiaai.gov.in/ministries/ministry-of-human-resource-development"
+               target="_blank"
+               rel="noopener noreferrer">
+                MHRD India
+            </a>
+            &amp;
+            <a href="https://www.chinesescholarshipcouncil.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Chinese Scholarship Council
+            </a>
+
+        </div>
+
+        <div class="year">
+            2017
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HIGHLIGHTS
+    ========================== -->
+
+    <h2 class="section-title">Highlights</h2>
+
+    <p class="intro">
+        A few moments from my academic journey and recognitions.
+    </p>
+
+    <div class="gallery">
+
+        <img src="award1.jpg" alt="Academic achievement">
+
+        <img src="award2.jpg" alt="Academic achievement">
+
+        <img src="award3.jpg" alt="Academic achievement">
+
+        <img src="award4.jpg" alt="Academic achievement">
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © Amit Patil | Built with GitHub Pages
+
+    </div>
+
 </div>
-<div class="year">2017</div>
-</div>
-
-<h2>Highlights</h2>
-
-<div class="gallery">
-
-<img src="award1.jpg">
-<img src="award2.jpg">
-<img src="award3.jpg">
-<img src="award4.jpg">
-
-</div>
-
-<div class="footer">
-© Amit Patil
-</div>
-
-</div>
+```
 
 </body>
 
